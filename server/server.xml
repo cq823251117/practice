@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="server"
+   SeparateXMLFiles="true"
+   PackageName="oracle.apps.ak.practice.server" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+   </DesignTime>
+   <Containee
+      Name="practiceAM"
+      FullName="oracle.apps.ak.practice.server.practiceAM"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="practiceVO"
+      FullName="oracle.apps.ak.practice.server.practiceVO"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

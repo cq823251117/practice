@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="region1" amDefName="oracle.apps.ak.practice.server.practiceAM" controllerClass="oracle.apps.ak.practice.webui.practiceCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:pageButtonBar id="pageButtonBar">
+               <ui:contents>
+                  <oa:submitButton id="CreateBtn" text="创建" prompt="创建"/>
+               </ui:contents>
+            </oa:pageButtonBar>
+            <oa:defaultSingleColumn id="defaultSingleColumn">
+               <ui:contents>
+                  <oa:messageTextInput id="userid" prompt="userid"/>
+                  <oa:messageTextInput id="username" prompt="username"/>
+                  <oa:submitButton id="go" text="Go" prompt="Go"/>
+                  <oa:submitButton id="clear" text="Clear" prompt="Clear"/>
+               </ui:contents>
+            </oa:defaultSingleColumn>
+            <oa:table id="table" width="60%">
+               <ui:contents>
+                  <oa:messageStyledText id="UserId" prompt="UserId" viewName="practiceVO1" viewAttr="UserId" dataType="NUMBER"/>
+                  <oa:messageStyledText id="UserName" prompt="UserName" viewName="practiceVO1" viewAttr="UserName" destination="OA.jsp?page=/oracle/apps/ak/practice/webui/practiceIntailPG&amp;userid={@UserId}"/>
+                  <oa:messageStyledText id="StartDate" prompt="StartDate" dataType="DATE" viewName="practiceVO1" viewAttr="StartDate"/>
+                  <oa:messageStyledText id="EndDate" dataType="DATE" viewName="practiceVO1" viewAttr="EndDate"/>
+                  <oa:messageStyledText id="EmailAddress" viewName="practiceVO1" viewAttr="EmailAddress" prompt="EmailAddress"/>
+                  <oa:image id="DeleteImg" source="deleteicon_enabled.gif" prompt="删除">
+                     <ui:primaryClientAction>
+                        <ui:fireAction event="Delete">
+                           <ui:parameters>
+                              <ui:parameter key="USER_ID" value="${oa.practiceVO1.UserId}"/>
+                           </ui:parameters>
+                        </ui:fireAction>
+                     </ui:primaryClientAction>
+                  </oa:image>
+                  <oa:image id="Update" prompt="更新" source="toolbar_updatelayout_enabled.gif">
+                     <ui:primaryClientAction>
+                        <ui:fireAction event="Update">
+                           <ui:parameters>
+                              <ui:parameter key="USER_ID" value="${oa.practiceVO1.UserId}"/>
+                           </ui:parameters>
+                        </ui:fireAction>
+                     </ui:primaryClientAction>
+                  </oa:image>
+               </ui:contents>
+            </oa:table>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

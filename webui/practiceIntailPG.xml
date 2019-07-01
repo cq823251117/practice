@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="pageLayout" amDefName="oracle.apps.ak.practice.server.practiceAM" controllerClass="oracle.apps.ak.practice.webui.practiceIntailCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:pageButtonBar id="pageButtonBar">
+               <ui:contents>
+                  <oa:submitButton id="SaveBar" text="保存" prompt="保存"/>
+                  <oa:submitButton id="CancelBar" text="取消" prompt="取消"/>
+               </ui:contents>
+            </oa:pageButtonBar>
+            <oa:messageComponentLayout id="region1">
+               <ui:contents>
+                  <oa:messageStyledText id="UserId" prompt="UserId" viewName="practiceVO1" viewAttr="UserId"/>
+                  <oa:messageStyledText id="UserName" viewName="practiceVO1" viewAttr="UserName" prompt="UserName"/>
+                  <oa:messageStyledText id="StartDate" dataType="DATE" viewName="practiceVO1" viewAttr="StartDate" prompt="StartDate"/>
+                  <oa:messageStyledText id="EndDate" dataType="DATE" viewName="practiceVO1" viewAttr="EndDate" prompt="EndDate"/>
+                  <oa:messageStyledText id="EmailAddress" viewName="practiceVO1" viewAttr="EmailAddress" prompt="EmailAddress"/>
+               </ui:contents>
+            </oa:messageComponentLayout>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>
